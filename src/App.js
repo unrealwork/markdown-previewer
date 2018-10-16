@@ -1,28 +1,42 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import {Editor} from "./Editor";
+import {Preview} from "./Preview"
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            markdown: ''
+        };
+        this.handleMarkdown = this.handleMarkdown.bind(this);
+    }
+
+    handleMarkdown(md) {
+        this.setState({
+            markdown: md
+        })
+    }
+
+    render() {
+        return (
+            <div className="App container">
+                <nav>
+                    <h2 className={"title is-2"}>Markdown Preview</h2>
+                </nav>
+                <hr className="navbar-divider"/>
+                <div className={"columns is-narrow"} style={{height: "100%"}}>
+                    <div className={"column"} style={{height: "100%"}}>
+                        <Editor onMarkdownChange={this.handleMarkdown}/>
+                    </div>
+                    <div className={"column"}>
+                        <Preview content={this.state.markdown}/>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;
