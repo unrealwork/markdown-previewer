@@ -2,6 +2,7 @@
   "name": "markdown-previewer",
   "version": "0.1.0",
   "private": true,
+  "homepage": "unrealwork.github.io/markdown-previewer",
   "dependencies": {
     "bulma": "^0.7.2",
     "marked": "^0.5.1",
