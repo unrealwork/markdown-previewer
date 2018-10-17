@@ -1,0 +1,28 @@
+language: node_js
+
+node_js:
+  - "stable"
+
+sudo: false
+
+before_script:
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+
+branches:
+  only:
+  - master
+
+jobs:
+  include:
+  - stage: build
+    script: yarn install
+  - # stage name not required, will continue to use `test`
+
+  - stage: test
+    script: yarn test
+
+  - stage: deploy
+    script: yarn deploy
+    if: branch = master
+

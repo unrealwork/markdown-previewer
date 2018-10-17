@@ -21,13 +21,13 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App container">
+            <div className="App container is-fluid">
                 <nav>
                     <h2 className={"title is-2"}>Markdown Preview</h2>
                 </nav>
                 <hr className="navbar-divider"/>
-                <div className={"columns is-narrow"} style={{height: "100%"}}>
-                    <div className={"column"} style={{height: "100%"}}>
+                <div className={"columns is-narrow"}>
+                    <div className={"column"}>
                         <Editor onMarkdownChange={this.handleMarkdown}/>
                     </div>
                     <div className={"column"}>

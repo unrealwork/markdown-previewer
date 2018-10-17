@@ -20,7 +20,7 @@ export class Editor extends React.Component {
         return (<div>
             <p className={"subtitle"}>Editor</p>
             <textarea className="textarea" type="text" id={"editor"} placeholder={"Markdown"}
-                      onChange={this.markdownChanged}></textarea>
+                      onChange={this.markdownChanged}/>
         </div>);
     }
 }
