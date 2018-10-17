@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as marked from "marked";
+import marked  from "marked";
 
 export class Preview extends React.Component {
     constructor(props) {
