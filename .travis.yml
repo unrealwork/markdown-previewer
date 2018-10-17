@@ -9,6 +9,10 @@ before_script:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
 
+branches:
+  only:
+  - master
+
 jobs:
   include:
   - stage: build
@@ -21,3 +25,4 @@ jobs:
   - stage: deploy
     script: yarn deploy
     if: branch = master
+
