@@ -1,4 +1,4 @@
-@import "~bulma/css/bulma.min.css";
+@import "../node_modules/bulma/css/bulma.min.css";
 
 
 textarea#editor {
@@ -7,6 +7,19 @@ textarea#editor {
     border: none;
 }
 
-div.root {
+pre#preview {
+}
+
+div.previewHolder {
+}
+
+div#root {
+    display: flex;
+    flex-flow: column;
     height: 100%;
+    margin: 0;
+}
+
+
+div.App {
 }
