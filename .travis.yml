@@ -20,7 +20,7 @@ jobs:
   - # stage name not required, will continue to use `test`
 
   - stage: test
-    script: yarn test
+    script: yarn install && yarn test
 
   - stage: deploy
     script: yarn deploy
