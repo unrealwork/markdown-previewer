@@ -17,15 +17,16 @@ jobs:
   - stage: build
     script: yarn build
   - # stage name not required, will continue to use `test`
-
   - stage: test
     script: yarn test
-
-  - stage: deploy
-    script: yarn deploy
-    if: branch = master
 
 stages:
 - build
 - test
-- deploy
+
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep-history: true
+  local-dir: build
