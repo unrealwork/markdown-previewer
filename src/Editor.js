@@ -4,8 +4,8 @@ export class Editor extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            markdown: ''
-        }
+            markdown: props.markdown
+        };
         this.markdownChanged = this.markdownChanged.bind(this);
     }
 
@@ -17,9 +17,11 @@ export class Editor extends React.Component {
     }
 
     render() {
-        return (<div>
-            <p className={"subtitle"}>Editor</p>
-            <textarea className="textarea" type="text" id={"editor"} placeholder={"Markdown"}
+        return (<div id={"editorPanel"}>
+            <textarea className="textarea"
+                      id={"editor"}
+                      placeholder={"Markdown"}
+                      value={this.state.markdown}
                       onChange={this.markdownChanged}/>
         </div>);
     }

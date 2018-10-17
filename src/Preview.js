@@ -20,7 +20,6 @@ export class Preview extends React.Component {
 
     render() {
         return (<div className={"previewHolder"}>
-            <p className={"subtitle"}>Preview</p>
             <div id={"preview"} className={"content"} dangerouslySetInnerHTML={{__html: marked(this.state.content)}}/>
         </div>)
     }

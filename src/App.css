@@ -4,7 +4,7 @@
 textarea#editor {
     height: 100vh;
     resize: none;
-    border: none;
+
 }
 
 pre#preview {
@@ -22,4 +22,17 @@ div#root {
 
 
 div.App {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    margin: 0;
 }
+
+
+div#editorPanel {
+    margin: 0;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 5px;
+}
+
