@@ -29,4 +29,5 @@ deploy:
   provider: pages
   skip_cleanup: true
   keep-history: true
+  github-token: $GITHUB_TOKEN
   local-dir: build
